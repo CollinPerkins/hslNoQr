@@ -45,7 +45,7 @@ export default class App extends Component {
       axios.get(`https://arcane-beyond-69327.herokuapp.com/allInventory`)
       .then(res => {
         console.log(res.data);
-        this.setState({items: res.data})
+        this.setState({items: res.data.trim()})
       });
     }.bind(this))
     .catch(function(err) {
