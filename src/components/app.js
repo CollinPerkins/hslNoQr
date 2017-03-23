@@ -38,14 +38,14 @@ export default class App extends Component {
     }
 
     axios.post('https://arcane-beyond-69327.herokuapp.com/addInventory', {
-      upc: this.state.upc,
+      upc: this.state.upc.trim(),
       location: this.state.location
     })
     .then(function(res) {
       axios.get(`https://arcane-beyond-69327.herokuapp.com/allInventory`)
       .then(res => {
         console.log(res.data);
-        this.setState({items: res.data.trim()})
+        this.setState({items: res.data})
       });
     }.bind(this))
     .catch(function(err) {
