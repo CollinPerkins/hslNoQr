@@ -12,7 +12,7 @@ export default class App extends Component {
   this.state= {
     items: [],
     hasStarted: false,
-    location: "22-1-A",
+    location: "22-2-A",
     upc: " ",
     qr: [
     //   {
